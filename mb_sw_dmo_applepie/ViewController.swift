@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         sender.isEnabled = false
+        let letterString = sender.title(for: .normal)!
+        let letter = Character(letterString.lowercased())
+        currentGame.playerGuessed(letter: letter)
+        updateUI()
     }
     
     override func viewDidLoad() {
@@ -32,12 +36,13 @@ class ViewController: UIViewController {
     
     func newRound() {
         let newWord = listOfWords.removeFirst()
-        currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed)
+        currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed, guessedLetters: [])
+        updateUI()
     }
     
     func updateUI() {
         scoreLabel.text = "Wins: \(totalWin), Losses: \(totalLosses)"
-        treeImageView.image = UIImage(named: "tree")
+        treeImageView.image = UIImage(named: "tree\(currentGame.incorrectMovesRemaining)")
     }
 }
 
