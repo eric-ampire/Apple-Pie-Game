@@ -10,7 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var listOfWords = ["kotlin", "swift", "programme", "bug", "macbook"]
+    var listOfWords = [
+        "kotlin", "swift", "programme", "bug", "macbook", "facebook", "java", "twitter", "apple", "microsoft",
+        "hackathon", "iphone", "ipad", "applepie", "jeux", "eric", "bigomokero", "finder", "xcode", "android"
+    ]
+    
     let incorrectMovesAllowed = 7
     
     // if player win, start new round
