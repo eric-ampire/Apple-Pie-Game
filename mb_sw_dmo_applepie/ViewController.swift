@@ -34,5 +34,10 @@ class ViewController: UIViewController {
         let newWord = listOfWords.removeFirst()
         currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed)
     }
+    
+    func updateUI() {
+        scoreLabel.text = "Wins: \(totalWin), Losses: \(totalLosses)"
+        treeImageView.image = UIImage(named: "tree")
+    }
 }
 
