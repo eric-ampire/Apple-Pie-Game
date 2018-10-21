@@ -12,8 +12,20 @@ class ViewController: UIViewController {
     
     var listOfWords = ["kotlin", "swift", "programme", "bug", "macbook"]
     let incorrectMovesAllowed = 7
-    var totalWin = 0
-    var totalLosses = 0
+    
+    // if player win, start new round
+    var totalWin = 0 {
+        didSet {
+            newRound()
+        }
+    }
+    
+    // if player loose, start new round
+    var totalLosses = 0 {
+        didSet {
+            newRound()
+        }
+    }
     var currentGame: Game!
 
     @IBOutlet weak var treeImageView: UIImageView!
@@ -26,7 +38,7 @@ class ViewController: UIViewController {
         let letterString = sender.title(for: .normal)!
         let letter = Character(letterString.lowercased())
         currentGame.playerGuessed(letter: letter)
-        updateUI()
+        updateStateGame()
     }
     
     override func viewDidLoad() {
