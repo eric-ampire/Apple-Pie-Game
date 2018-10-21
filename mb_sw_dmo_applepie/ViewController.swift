@@ -55,7 +55,24 @@ class ViewController: UIViewController {
     func updateUI() {
         scoreLabel.text = "Wins: \(totalWin), Losses: \(totalLosses)"
         treeImageView.image = UIImage(named: "tree\(currentGame.incorrectMovesRemaining)")
-        correctWordLabel.text = currentGame.formattedWord
+        
+        var letters = [String]()
+        for letter in currentGame.formattedWord {
+            letters.append(String(letter))
+        }
+        
+        let wordWithSpace = letters.joined(separator: " ")
+        correctWordLabel.text = wordWithSpace
+    }
+    
+    func updateStateGame() {
+        if currentGame.incorrectMovesRemaining == 0 {
+            totalLosses += 1
+        } else if currentGame.formattedWord == currentGame.word {
+            totalWin += 1
+        } else {
+            updateUI()
+        }
     }
 }
 
