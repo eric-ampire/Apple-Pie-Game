@@ -14,6 +14,7 @@
 		0DAEE629217D0EBA00CA4F2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DAEE627217D0EBA00CA4F2E /* LaunchScreen.storyboard */; };
 		0DAEE634217D0EBA00CA4F2E /* mb_sw_dmo_applepieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAEE633217D0EBA00CA4F2E /* mb_sw_dmo_applepieTests.swift */; };
 		0DAEE63F217D0EBB00CA4F2E /* mb_sw_dmo_applepieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAEE63E217D0EBB00CA4F2E /* mb_sw_dmo_applepieUITests.swift */; };
+		0DAEE64D217D21C400CA4F2E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAEE64C217D21C400CA4F2E /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0DAEE63A217D0EBB00CA4F2E /* mb_sw_dmo_applepieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mb_sw_dmo_applepieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DAEE63E217D0EBB00CA4F2E /* mb_sw_dmo_applepieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mb_sw_dmo_applepieUITests.swift; sourceTree = "<group>"; };
 		0DAEE640217D0EBB00CA4F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DAEE64C217D21C400CA4F2E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				0DAEE61E217D0EB700CA4F2E /* AppDelegate.swift */,
 				0DAEE620217D0EB700CA4F2E /* ViewController.swift */,
 				0DAEE622217D0EB700CA4F2E /* Main.storyboard */,
+				0DAEE64C217D21C400CA4F2E /* Game.swift */,
 				0DAEE625217D0EBA00CA4F2E /* Assets.xcassets */,
 				0DAEE627217D0EBA00CA4F2E /* LaunchScreen.storyboard */,
 				0DAEE62A217D0EBA00CA4F2E /* Info.plist */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DAEE621217D0EB700CA4F2E /* ViewController.swift in Sources */,
+				0DAEE64D217D21C400CA4F2E /* Game.swift in Sources */,
 				0DAEE61F217D0EB700CA4F2E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

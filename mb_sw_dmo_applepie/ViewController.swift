@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var listOfWords = ["kotlin", "swift", "programme", "bug", "macbook"]
+    let incorrectMovesAllowed = 7
+    var totalWin = 0
+    var totalLosses = 0
+    var currentGame: Game!
 
     @IBOutlet weak var treeImageView: UIImageView!
     @IBOutlet weak var correctWordLabel: UILabel!
@@ -18,9 +24,15 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         sender.isEnabled = false
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        newRound()
+    }
+    
+    func newRound() {
+        let newWord = listOfWords.removeFirst()
+        currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed)
     }
 }
 
