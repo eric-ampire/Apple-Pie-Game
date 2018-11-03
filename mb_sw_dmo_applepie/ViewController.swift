@@ -8,6 +8,13 @@
 
 import UIKit
 
+struct Book {
+    var name: String
+    var publicationYear: Int?
+}
+
+let book = Book(name: "maintrise du ath", publicationYear:  nil)
+
 class ViewController: UIViewController {
     
     var listOfWords = [
